@@ -1549,4 +1549,4 @@ CategoricalColors.set('glasbey_dark', [
 [0.862745,0.690196,0.784314],
 ])
 
-export default CategoricalColors;
+export default CategoricalColors
