@@ -35,7 +35,7 @@ with open('src/CategoricalColors.ts', 'w') as fp:
         fp.write("CategoricalColors.set('{}', [\n".format(color['Name']))
         rgb_values = color['IndexedColors']
         for rgb in rgb_values:
-            fp.write('[')
+            fp.write('  [')
             fp.write(str(float(rgb[0])))
             fp.write(',')
             fp.write(str(float(rgb[1])))
@@ -43,5 +43,15 @@ with open('src/CategoricalColors.ts', 'w') as fp:
             fp.write(str(float(rgb[2])))
             fp.write('],\n')
         fp.write('])\n')
+
+    fp.write("\nCategoricalColors.set('modulate', [\n")
+    for ii in range(12):
+        fp.write('  [1.0,1.0,1.0],\n')
+    fp.write('])\n')
+
+    fp.write("\nCategoricalColors.set('modulate_dark', [\n")
+    for ii in range(12):
+        fp.write('  [0.0,0.0,0.0],\n')
+    fp.write('])\n')
 
     fp.write('\nexport default CategoricalColors\n')

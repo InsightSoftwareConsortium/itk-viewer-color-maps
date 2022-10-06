@@ -9,6 +9,7 @@
     "build": "npm run build:tsc",
     "build:tsc": "tsc --pretty",
     "build:categorical": "python3 src/generateCategoricalColors.py",
+    "start": "webpack-dev-server --config src/generate-icons/webpack.config.cjs --port 8887 --mode development --content-base ./src/generate-icons/ --watch-content-base",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +30,16 @@
   },
   "homepage": "https://github.com/InsightSoftwareConsortium/itk-viewer-color-maps#readme",
   "devDependencies": {
-    "typescript": "^4.8.4"
+    "@babel/core": "^7.6.2",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "typescript": "^4.8.4",
+    "vtk.js": "^11.14.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpackbar": "^4.0.0"
   }
 }
