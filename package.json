@@ -1,0 +1,32 @@
+{
+  "name": "itk-viewer-color-maps",
+  "version": "1.0.0",
+  "description": "Color maps and lookup tables for itk-viewer",
+  "module": "./dist/index.js",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build:tsc": "tsc --pretty",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InsightSoftwareConsortium/itk-viewer-color-maps.git"
+  },
+  "keywords": [
+    "colormap",
+    "lookup-table",
+    "lut",
+    "ui",
+    "itk-viewer"
+  ],
+  "author": "Matt McCormick",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/InsightSoftwareConsortium/itk-viewer-color-maps/issues"
+  },
+  "homepage": "https://github.com/InsightSoftwareConsortium/itk-viewer-color-maps#readme",
+  "devDependencies": {
+  },
+  "dependencies": {}
+}
