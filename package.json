@@ -8,7 +8,7 @@
   "scripts": {
     "build": "npm run build:tsc",
     "build:tsc": "tsc --pretty",
-    "build:categorical": "python3 src/generateCategoricalColorMaps.py",
+    "build:categorical": "python3 src/generateCategoricalColors.py",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
