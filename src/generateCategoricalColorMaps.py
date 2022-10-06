@@ -30,7 +30,7 @@ for file_prefix, name in glasbey_to_name.items():
     colors.append(indexed_color)
 
 with open('src/CategoricalColors.ts', 'w') as fp:
-    fp.write('const CategoricalColors = new Map()\n\n')
+    fp.write('const CategoricalColors = new Map<string, Array<[number, number, number]>>()\n\n')
     for color in colors:
         fp.write("CategoricalColors.set('{}', [\n".format(color['Name']))
         rgb_values = color['IndexedColors']

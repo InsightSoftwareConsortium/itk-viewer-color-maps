@@ -1,4 +1,4 @@
-const CategoricalColors = new Map()
+const CategoricalColors = new Map<string, Array<[number, number, number]>>()
 
 CategoricalColors.set('glasbey', [
 [0.843137,0.0,0.0],
