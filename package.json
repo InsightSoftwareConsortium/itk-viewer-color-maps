@@ -1,12 +1,13 @@
 {
   "name": "itk-viewer-color-maps",
   "version": "1.0.0",
-  "description": "Color maps and lookup tables for itk-viewer",
+  "description": "Color maps for itk-viewer",
   "module": "./dist/index.js",
   "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build:tsc": "tsc --pretty",
+    "build:categorical": "python3 src/generateCategoricalColorMaps.py",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

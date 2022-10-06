@@ -1,6 +1,6 @@
 # itk-viewer-color-maps
 
-Color maps and lookup tables for itk-viewer.
+Color maps for itk-viewer.
 
-Select color maps, lookup tables, and their icons sourced from Matplotlib,
-VTK.js, VolView, Slicer, and Fiji.
+Select continuous and categorical color maps and their icons sourced from Matplotlib,
+VTK.js, VolView, Slicer, Colorcet, and Fiji.
