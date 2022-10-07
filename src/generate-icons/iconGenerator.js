@@ -119,7 +119,7 @@ let lutModuleContent = `const CategoricalColorIcons = new Map<string, string>()
 `
 
 CategoricalColorNames.forEach((presetName) => {
-  const colors = CategoricalColors.get(presetName);
+  const colors = CategoricalColors.get(presetName).IndexedColors;
 
   //lookupTable.setIndexedLookup(true)
   //const annotations = new Uint8Array(categoricalColors);
@@ -146,11 +146,13 @@ CategoricalColorNames.forEach((presetName) => {
   const colorWidth = width / categoricalColors
   for (let i = 0; i < categoricalColors; i++) {
     const offset = i * colorWidth * 4
-    const color = colors[i]
+    const red = colors[i*3]
+    const green = colors[i*3+1]
+    const blue = colors[i*3+2]
     for (let j = 0; j < colorWidth; j++) {
-      rgba[offset + j*4] = color[0] * 255
-      rgba[offset + j*4 + 1] = color[1] * 255
-      rgba[offset + j*4 + 2] = color[2] * 255
+      rgba[offset + j*4] = red * 255
+      rgba[offset + j*4 + 1] = green * 255
+      rgba[offset + j*4 + 2] = blue * 255
       rgba[offset + j*4 + 3] = 255
     }
   }
