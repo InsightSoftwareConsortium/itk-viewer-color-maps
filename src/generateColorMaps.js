@@ -25,10 +25,18 @@ ColorMapNames.forEach((name) => {
   }
   const cmap = match[0]
   if (cmap.AbsoluteRange) {
-    const min = Math.min(...cmap.RGBPoints)
-    const max = Math.max(...cmap.RGBPoints)
-    cmap.RGBPoints = cmap.RGBPoints.map((p) => (p-min)/(max-min))
+    let min = Infinity
+    let max = -Infinity
+    for (let ii = 0; ii < cmap.RGBPoints.length / 4; ii++) {
+      min = Math.min(min, cmap.RGBPoints[ii*4])
+      max = Math.max(max, cmap.RGBPoints[ii*4])
+    }
+    for (let ii = 0; ii < cmap.RGBPoints.length / 4; ii++) {
+      cmap.RGBPoints[ii*4] = (cmap.RGBPoints[ii*4]-min)/(max-min)
+    }
     delete cmap.AbsoluteRange
+    delete cmap.EffectiveRange
+    delete cmap.OpacityPoints
   }
 
   colorMapsObject[name] = cmap
