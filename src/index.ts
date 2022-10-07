@@ -1,3 +1,4 @@
+export { default as ColorMaps } from './ColorMaps.js'
 export { default as ColorMapNames } from './ColorMapNames.js'
 export { default as ColorMapIcons } from './ColorMapIcons.js'
 
