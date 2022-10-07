@@ -1,6 +1,6 @@
 {
   "name": "itk-viewer-color-maps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Color maps for itk-viewer",
   "module": "./dist/index.js",
   "type": "module",
@@ -11,6 +11,7 @@
     "build:categorical": "python3 src/generateCategoricalColors.py",
     "build:colormaps": "node src/generateColorMaps.js",
     "start": "webpack-dev-server --config src/generate-icons/webpack.config.cjs --port 8887 --mode development --content-base ./src/generate-icons/ --watch-content-base",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
