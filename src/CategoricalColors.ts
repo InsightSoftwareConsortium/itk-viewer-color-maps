@@ -1,4 +1,6 @@
-const CategoricalColors = new Map<string, Record<"IndexedColors" | "NanColor", number[]>>()
+export type CategoricalColor = Record<"IndexedColors" | "NanColor", number[]>
+
+const CategoricalColors = new Map<string, CategoricalColor>()
 
 CategoricalColors.set('glasbey',
 {
