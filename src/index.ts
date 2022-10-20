@@ -5,3 +5,5 @@ export { default as ColorMapIcons } from './ColorMapIcons.js'
 export { default as CategoricalColors } from './CategoricalColors.js'
 export { default as CategoricalColorNames } from './CategoricalColorNames.js'
 export { default as CategoricalColorIcons } from './CategoricalColorIcons.js'
+
+export { getColorMap } from './getColorMap.js'
