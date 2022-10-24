@@ -8,7 +8,7 @@ Select continuous and categorical color maps and their icons sourced from Matplo
 VTK.js, VolView, Slicer, Colorcet, and Fiji.
 
 
-## Build
+## Build for development
 
 ```
 npm run build
